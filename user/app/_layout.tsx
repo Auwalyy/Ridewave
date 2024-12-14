@@ -1,10 +1,10 @@
-import * as SplashScreen from "expo-splash-screen";
 import { useEffect, useState } from "react";
 import "react-native-reanimated";
 import { Stack } from "expo-router";
 import { ToastProvider } from "react-native-toast-notifications";
 import { LogBox } from "react-native";
 import { useFonts } from "expo-font";
+import React from "react";
 
 export {
   // Catch any errors thrown by the Layout component.
@@ -19,16 +19,16 @@ export default function RootLayout() {
     "TT-Octosquares-Medium": require("../assets/fonts/TT-Octosquares-Medium.ttf"),
   });
 
-  useEffect(() => {
-    LogBox.ignoreAllLogs(true);
-    if (loaded || error) {
-      SplashScreen.hideAsync();
-    }
-  }, [loaded, error]);
+  // useEffect(() => {
+  //   LogBox.ignoreAllLogs(true);
+  //   if (loaded || error) {
+  //     SplashScreen.hideAsync();
+  //   }
+  // }, [loaded, error]);
 
-  if (!loaded && !error) {
-    return null;
-  }
+  // if (!loaded && !error) {
+  //   return null;
+  // }
 
   return <RootLayoutNav />;
 }
@@ -38,7 +38,6 @@ function RootLayoutNav() {
     <ToastProvider>
       <Stack screenOptions={{ headerShown: false }}>
         <Stack.Screen name="index" />
-        <Stack.Screen name="/(routes)/onboarding/index" />
       </Stack>
     </ToastProvider>
   );

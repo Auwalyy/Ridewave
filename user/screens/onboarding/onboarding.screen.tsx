@@ -1,3 +1,37 @@
+// import { View, Text, Image } from 'react-native'
+// import React from 'react'
+// import color from '@/themes/app.colors'
+// import Swiper from "react-native-swiper";
+// import { styles } from './styles'
+// import { slides } from "@/configs/constants";
+
+// export default function OnboardingScreen() {
+//   return (
+//     <View style={{flex: 1, backgroundColor: color.whiteColor}}>
+//       <Swiper
+//       activeDotStyle={styles.activeStyle}
+//       removeClippedSubviews={true}
+//       paginationStyle={styles.paginationStyle}
+//       >
+//         {slides.map((slide:any,index:number) =>(
+//           <View style={[styles.slideContainer]} key={index}>
+//             <Image 
+//             styles={styles.imageBackground}
+//             source={slide.image}
+//             />
+//           </View>
+//         ))}
+//       </Swiper>
+//     </View>
+//   )
+// }
+
+
+
+
+
+
+
 import {
   View,
   Text,
@@ -47,3 +81,6 @@ export default function OnBoardingScreen() {
     </View>
   );
 }
+
+
+
